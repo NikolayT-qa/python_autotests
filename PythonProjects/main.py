@@ -1,6 +1,6 @@
 import requests
 URL='https://api.pokemonbattle.ru/v2'
-TOKEN = '3867b6550810443a45aced88cd9fe986'
+TOKEN = ''
 HEADER={'Content-Type':'application/json', 'trainer_token': TOKEN}
 
 body_creat_pokemon ={
@@ -26,4 +26,5 @@ response_changeName_pokemon = requests.put(url=f'{URL}/pokemons', headers= HEADE
 print(response_changeName_pokemon.json())
 
 response_catch_pokemon=requests.post(url = f'{URL}/trainers/add_pokeball', headers = HEADER,json=body_catch_pokemon)
+
 print(response_catch_pokemon.json())
